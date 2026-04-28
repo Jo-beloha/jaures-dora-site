@@ -1,8 +1,27 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+export default function App() {
+  const [messageSent, setMessageSent] = useState(false);
+
+  const projects = [
+    {
+      title: "Harmonea Brand",
+      desc: "Branding & e-commerce concept for a modern lifestyle brand.",
+    },
+    {
+      title: "Digital Design Pack",
+      desc: "Creation of logos, social media kits and visual identity systems.",
+    },
+    {
+      title: "Business Concepts",
+      desc: "Development of product catalogs and international business ideas.",
+    },
   ];
 
   return (
     <div className="bg-black text-white min-h-screen font-sans">
+      
       {/* NAV */}
       <header className="fixed top-0 w-full flex justify-between items-center px-10 py-6 bg-black/60 backdrop-blur-md border-b border-white/10">
         <h1 className="tracking-[0.3em] font-light">JAURES DORA</h1>
@@ -23,6 +42,7 @@ import { useState } from "react";
         >
           Jaures Dora
         </motion.h2>
+
         <p className="mt-6 text-white/60 max-w-xl">
           Entrepreneur • Designer • Creator of digital and business concepts
         </p>
@@ -32,9 +52,7 @@ import { useState } from "react";
       <section id="about" className="px-10 py-24 border-t border-white/10">
         <h2 className="text-3xl font-light mb-6">About Me</h2>
         <p className="text-white/60 max-w-2xl leading-relaxed">
-          I am focused on building modern brands, digital products, and business
-          ideas with a global vision. My goal is to create impactful and scalable
-          projects that can grow internationally.
+          I am focused on building modern brands, digital products, and business ideas with a global vision.
         </p>
       </section>
 
@@ -80,4 +98,3 @@ import { useState } from "react";
     </div>
   );
 }
-
